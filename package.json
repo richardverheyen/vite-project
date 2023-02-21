@@ -2,13 +2,12 @@
   "name": "vite-project",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "node server",
     "build": "npm run build:client && npm run build:server",
     "build:client": "vite build --ssrManifest --outDir dist/client",
     "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server",
-    "generate": "vite build --outDir dist/static && npm run build:server && node prerender.cjs",
+    "generate": "vite build --outDir dist/static && npm run build:server && node prerender",
     "serve": "cross-env NODE_ENV=production node server"
   },
   "dependencies": {
